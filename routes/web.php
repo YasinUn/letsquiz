@@ -12,9 +12,15 @@ use App\Http\Controllers\WheelSpinController;
 // routes/web.php
 Route::post('/gems/add', [GemsController::class, 'addGems'])->middleware('auth')->name('gems.add');
 
+// Portfolio landing page (first page visitors see)
 Route::get('/', function () {
+    return view('portfolio');
+})->name('portfolio');
+
+// Main application homepage
+Route::get('/home', function () {
     return view('welcome');
-});
+})->name('home');
 
 Route::get('/dashboard', [DashboardController::class, 'index'])
     ->middleware(['auth'])
