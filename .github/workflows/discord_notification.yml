@@ -1,0 +1,17 @@
+name: Discord Notification
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  notify-discord:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Stuur bericht naar Discord
+        run: |
+          curl -H "Content-Type: application/json" \
+               -X POST \
+               -d "{\"content\":\"🚀 Deployment naar productie is voltooid door *${{ github.actor }}* op branch *${{ github.ref_name }}*!\"}" \
+               ${{ secrets.DISCORD_WEBHOOK_URL }}

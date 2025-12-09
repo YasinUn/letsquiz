@@ -1,0 +1,27 @@
+@import './quiz-duo.css';
+@import './quiz-list.css';
+@import './profile.css'; /* ensure profile styles bundled so test environment manifest doesn't need separate entry */
+@import './error-card.css';
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global app background using Laravel asset pipeline */
+.app-bg {
+    background-color: #ffffff;
+    background-image: url("../images/rings-bg.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.theme-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    /* Default overlay, wordt inline overschreven */
+    background: rgba(255,255,255,0.0);
+}
+

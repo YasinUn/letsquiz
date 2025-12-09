@@ -1,0 +1,15 @@
+# Ignore all user-uploaded avatar variants (generated at runtime)
+user_*.png
+user_*.jpg
+user_*.jpeg
+user_*.webp
+
+# Keep the shipped default avatars in git
+!avatar1.png
+!avatar2.png
+!avatar3.png
+!avatar4.png
+!Rome.png
+
+# Keep this gitignore file
+!.gitignore

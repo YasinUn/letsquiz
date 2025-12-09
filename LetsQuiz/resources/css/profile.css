@@ -1,0 +1,45 @@
+/* Profile page specific hard resets so colored theme changes don't bleed into panels */
+.profile-page-root { position: relative; }
+.profile-page-root * { box-sizing: border-box; }
+
+/* Card panels */
+.profile-card {
+    background: rgba(255,255,255,.72); /* semi-transparant vergelijkbaar met quiz */
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    color: #111827; /* base text color */
+    border-radius: 1rem;
+    box-shadow: 0 8px 24px rgba(0,0,0,.08), 0 2px 4px rgba(0,0,0,.04);
+    position: relative;
+    isolation: isolate; /* prevent blend from ancestors */
+    border: 1px solid rgba(255,255,255,.55);
+}
+.profile-card h2 { color: #111827; font-weight: 700; text-shadow: 0 1px 1px rgba(255,255,255,.4); }
+.profile-card p { color: #374151; }
+
+/* Inputs */
+.profile-card input[type='text'],
+.profile-card input[type='email'],
+.profile-card input[type='password'] {
+    background: rgba(255,255,255,.9);
+    border: 1px solid rgba(209,213,219,.8);
+    color: #111827;
+    transition: background .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+.profile-card input[type='text']:focus,
+.profile-card input[type='email']:focus,
+.profile-card input[type='password']:focus {
+    background: #ffffff;
+    border-color: #6366f1;
+    box-shadow: 0 0 0 3px rgba(99,102,241,.25);
+}
+/* Outline niet meer nodig door custom focus styling */
+
+/* Buttons alignment and neutral background for secondary */
+.profile-card .btn-row { display: flex; align-items: center; gap: .75rem; }
+
+/* Danger section modal override */
+.profile-card .modal { background: #ffffff; }
+
+/* Remove accidental translucency */
+.profile-card, .profile-card * { filter: none !important; mix-blend-mode: normal !important; }

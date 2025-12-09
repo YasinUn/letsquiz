@@ -1,0 +1,147 @@
+/* Clean quiz duo stylesheet - fixed version */
+/* CSS Variables */
+:root {
+  --primary: #8b5cf6;
+  --primary-strong: #7c3aed;
+  --accent-pink: #ec4899;
+  --muted: #f3f4f6;
+  /* --user-theme-stroke is optionally defined in layout when theme_color is null (white stroke). */
+}
+
+/* Base layout */
+.duo-shell { font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; padding:36px; max-width:1200px; margin:0 auto; }
+.duo-top { display:flex; align-items:center; justify-content:space-between; gap:16px; }
+.duo-close { background:transparent; border:none; font-size:20px; color:#000; cursor:pointer; }
+
+/* Progress */
+.progress-rail { box-shadow: inset 0 1px 0 rgba(0,0,0,0.03); }
+#duo-progress { background:linear-gradient(90deg,var(--primary-strong),var(--accent-pink)); height:100%; }
+#duo-progress-text { font-size:.8rem; }
+
+/* Stage & core */
+.duo-stage { padding-top:24px; }
+/* Verticaal centreren: elke zichtbare vraag krijgt min-height relatief aan viewport minus hoogte bottom bar */
+.duo-question { min-height:calc(100vh - 190px); display:flex; flex-direction:column; align-items:center; justify-content:center; }
+/* Animate only the question-core (not the bottom action bar) */
+.duo-question > .duo-question-core { opacity:0; transform:translateY(14px); transition:opacity .45s cubic-bezier(.16,.8,.3,1), transform .45s cubic-bezier(.16,.8,.3,1); }
+.duo-question.duo-visible > .duo-question-core { opacity:1; transform:translateY(0); }
+.duo-question-core { max-width:720px; width:100%; margin:0 auto; text-align:left; padding:0 4px 140px; }
+.duo-question-core .duo-instruction { font-size:clamp(1.05rem, 0.9rem + 0.9vw, 1.48rem); line-height:1.42; color:var(--question-text-color,#0f172a); font-weight:600; }
+
+/* Choices grid */
+.duo-choices { display:grid; gap:18px; grid-template-columns:1fr; width:100%; margin-top:8px; }
+@media (min-width:720px){ .duo-choices { grid-template-columns:1fr 1fr; } }
+@media (min-width:1000px){ .duo-choices { gap:22px; } }
+
+/* Choice buttons */
+.duo-choice { border:1px solid rgba(229,231,235,0.65); background:rgba(255,255,255,0.72); color:#111827; cursor:pointer; padding:18px 20px; border-radius:14px; min-height:64px; display:flex; align-items:center; justify-content:flex-start; text-align:left; font-weight:600; font-size:15px; transition:background .18s, transform .14s, box-shadow .18s, border-color .25s; box-shadow:0 4px 18px -4px rgba(0,0,0,0.10); user-select:none; backdrop-filter:blur(6px) saturate(140%); -webkit-backdrop-filter:blur(6px) saturate(140%); }
+.duo-choice:hover { background:rgba(255,255,255,0.88); box-shadow:0 6px 20px -4px rgba(0,0,0,0.12); }
+/* Focus ring remains visible over transparency */
+.duo-choice:focus-visible { border-color:var(--primary-strong); }
+.duo-choice.selected { border-color:var(--primary); background:linear-gradient(90deg,var(--primary-strong),var(--accent-pink)); color:#fff; box-shadow:0 10px 30px -4px rgba(124,58,237,0.40); }
+.duo-choice.bg-green { background:rgba(236,253,245,0.9); border-color:#34d399; color:#065f46; backdrop-filter:none; }
+.duo-choice.bg-red { background:rgba(255,241,242,0.92); border-color:#fb7185; color:#7f1d1d; backdrop-filter:none; }
+.duo-choice.bg-green .choice-text { color:#065f46 !important; }
+.duo-choice.bg-red .choice-text { color:#7f1d1d !important; }
+.duo-choice.selected .choice-text { color:#fff !important; }
+
+/* Feedback & helper */
+.feedback { font-weight:700; font-size:.9rem; color:#111827; }
+.duo-helper { min-width:70px; text-align:right; font-weight:600; color:#6b7280; }
+.duo-repeated { color:#f97316; font-weight:700; }
+
+/* Buttons */
+.duo-btn { padding:10px 18px; border-radius:10px; font-weight:700; letter-spacing:.2px; min-width:110px; cursor:pointer; }
+.duo-btn-primary { background:linear-gradient(90deg,var(--primary-strong),var(--accent-pink)); color:#fff; border:none; box-shadow:0 6px 18px rgba(124,58,237,0.28); }
+.duo-btn-primary:not(.duo-btn-disabled):hover { transform:translateY(-2px); box-shadow:0 10px 26px rgba(124,58,237,0.35); }
+.duo-btn-next { background:linear-gradient(90deg,var(--primary-strong),var(--accent-pink)); color:#fff; border:none; box-shadow:0 6px 18px rgba(124,58,237,0.28); }
+.duo-btn-next:hover { transform:translateY(-2px); box-shadow:0 10px 26px rgba(124,58,237,0.35); filter:brightness(1.05); }
+.duo-btn-disabled { background:var(--muted); color:#9ca3af; border:none; cursor:not-allowed; box-shadow:none; }
+.duo-btn-primary.duo-btn-disabled { background:var(--muted); box-shadow:none; color:#9ca3af; }
+
+/* Bottom action bar (dynamic gradient) */
+:root { --app-bg-rgb: 255,255,255; }
+/* Use user theme color directly (hex) blended into white or dark fallback */
+.duo-actions-bar { position:fixed; left:0; bottom:0; width:100%;
+  background:linear-gradient(180deg,
+      color-mix(in srgb, var(--user-theme-color) 50%, transparent) 0%,
+      color-mix(in srgb, var(--user-theme-color) 35%, transparent) 35%,
+      color-mix(in srgb, var(--user-theme-color) 18%, transparent) 60%,
+      color-mix(in srgb, var(--user-theme-color) 8%, transparent) 78%,
+      transparent 95%);
+  padding:20px 18px 26px; backdrop-filter:blur(18px) saturate(150%); -webkit-backdrop-filter:blur(18px) saturate(150%);
+  display:flex; flex-direction:column; align-items:center; gap:10px; z-index:50;
+  box-shadow:0 -2px 12px rgba(0,0,0,0.18); transition:background .45s ease, backdrop-filter .3s ease; }
+.duo-actions-inner { width:100%; max-width:720px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:14px; }
+.duo-actions-buttons { display:flex; align-items:center; gap:12px; }
+.duo-actions-buttons { min-height:52px; }
+/* Reserve space for next button to avoid height jump */
+.duo-actions-buttons .duo-next.hidden { visibility:hidden; opacity:0; pointer-events:none; position:relative; }
+.duo-actions-buttons .duo-next { transition:opacity .25s; }
+.duo-actions-buttons .duo-btn { transition: box-shadow .2s, transform .18s, background-color .2s; }
+.duo-actions-buttons .duo-btn:active { transform:translateY(0); box-shadow:0 3px 8px rgba(0,0,0,0.15); }
+
+/* Finished */
+.duo-finished { text-align:center; padding:60px 20px 180px; max-width:760px; margin:0 auto; }
+
+/* Responsive adjustments */
+@media (max-width:800px){
+  .duo-shell { padding:28px 22px 90px; }
+  .duo-question { min-height:calc(100vh - 210px); }
+  .duo-question-core { padding-bottom:130px; }
+}
+@media (max-width:640px){
+  .duo-actions-inner { flex-direction:column; align-items:stretch; }
+  .duo-actions-buttons { width:100%; }
+  .duo-actions-buttons .duo-btn { flex:1 1 auto; }
+  .duo-question-core .duo-instruction { font-size:1.05rem; }
+  .duo-question { min-height:calc(100vh - 220px); }
+  .duo-choice { padding:14px; min-height:56px; font-size:.9rem; }
+  .duo-btn { min-width:96px; padding:8px 14px; font-size:.8rem; }
+}
+@media (max-width:520px){ .duo-choices { grid-template-columns:1fr; gap:16px; } }
+@media (max-width:400px){
+  .duo-shell { padding:24px 16px 80px; }
+  .duo-question-core .duo-instruction { font-size:.98rem; }
+  .duo-choice { font-size:.82rem; }
+}
+
+/* =========================================
+   Readability enhancements
+   ========================================= */
+/* Question block: shorter line length, larger, calmer line-height */
+/* Refined question typography (smaller & no card background) */
+.duo-question-core .duo-instruction { max-width:50ch; margin:0 0 1.1rem 0; }
+/* Remove card look; apply dynamic darker theme-colored outline */
+.duo-instruction { background:transparent !important; border:none !important; box-shadow:none !important; padding:0 !important; position:relative; }
+/* Dynamic outline: use darker mix of user theme; fallback chain: user-theme-color -> #000 */
+.duo-instruction {
+  /* Stroke: wit wanneer theme actief (--user-theme-stroke:#fff), anders transparant */
+  -webkit-text-stroke:1.1px var(--user-theme-stroke, transparent);
+  paint-order:stroke fill;
+  /* Simuleer stroke voor browsers zonder -webkit-text-stroke */
+  text-shadow:1px 0 0 var(--user-theme-stroke, transparent), -1px 0 0 var(--user-theme-stroke, transparent), 0 1px 0 var(--user-theme-stroke, transparent), 0 -1px 0 var(--user-theme-stroke, transparent),
+             1px 1px 0 var(--user-theme-stroke, transparent), -1px 1px 0 var(--user-theme-stroke, transparent), 1px -1px 0 var(--user-theme-stroke, transparent), -1px -1px 0 var(--user-theme-stroke, transparent);
+  color:var(--question-text-color,#0f172a);
+}
+/* Decorative soft shadow underline */
+.duo-instruction:after { content:""; position:absolute; left:0; bottom:-6px; width:38%; max-width:240px; height:10px; background:radial-gradient(ellipse at center, rgba(0,0,0,0.18) 0%, rgba(0,0,0,0) 70%); opacity:.25; filter:blur(4px); pointer-events:none; }
+/* Choices: slightly larger, improved line height and wrapping */
+.duo-choice { font-size:15px; line-height:1.32; font-weight:500; }
+.duo-choice .choice-text { flex:1; }
+/* Better focus visibility for keyboard users */
+.duo-choice:focus-visible { outline:3px solid var(--primary-strong); outline-offset:2px; }
+/* Improve selected readability with a subtle inner shadow for contrast */
+.duo-choice.selected { text-shadow:0 1px 2px rgba(0,0,0,0.25); }
+/* Feedback spacing tweak */
+.feedback { margin-top:10px; }
+
+/* Reserve space for feedback so bar height never changes */
+.duo-actions-bar .feedback { min-height:1.2em; line-height:1.2; }
+/* Keep hidden feedback occupying space */
+.duo-actions-bar .feedback.hidden { display:block !important; visibility:hidden; }
+
+@media (max-width:640px){
+  .duo-question-core .duo-instruction { font-size:clamp(1rem, .85rem + 1.25vw, 1.25rem); }
+  .duo-instruction:after { bottom:-4px; height:8px; }
+}

@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:imsmd="http://www.imsglobal.org/xsd/imsmd_v1p2" xmlns:imsqti="http://www.imsglobal.org/xsd/imsqti_v2p1" xsi:schemaLocation="http://www.imsglobal.org/xsd/imscp_v1p1 http://www.imsglobal.org/xsd/imscp_v1p1.xsd http://www.imsglobal.org/xsd/imsmd_v1p2 http://www.imsglobal.org/xsd/imsmd_v1p2p2.xsd http://www.imsglobal.org/xsd/imsqti_v2p1 http://www.imsglobal.org/xsd/imsqti_v2p1.xsd" identifier="DRP-09202025-T-LO" xmlns="http://www.imsglobal.org/xsd/imscp_v1p1">
+  <metadata>
+    <imsmd:lom>
+      <imsmd:general>
+        <imsmd:title>
+          <imsmd:langstring xml:lang="en">Content Package with QTI v2.1 items</imsmd:langstring>
+        </imsmd:title>
+      </imsmd:general>
+      <imsmd:technical>
+        <imsmd:format>text/x-imsqti-item-xml</imsmd:format>
+      </imsmd:technical>
+      <imsmd:rights>
+        <imsmd:description>
+          <imsmd:langstring xml:lang="en">Copyright (c) 2008 DRP - All rights reserved, http://www.drp.nl</imsmd:langstring>
+        </imsmd:description>
+      </imsmd:rights>
+    </imsmd:lom>
+  </metadata>
+  <organizations default="DRP-09202025-T01">
+    <organization identifier="DRP-09202025-T01">
+      <title>Project9-7-2025.zip</title>
+      <item identifier="DRP-09202025-T-ITEM1" isvisible="false">
+        <title>Project9-7-2025.zip</title>
+      </item>
+    </organization>
+  </organizations>
+  <resources>
+    <resource identifier="DRP-09202025-T-R1" type="imsqti_item_xmlv2p1" href="choiceInteraction_LARGESOURCE_MULTIPLECHOICE_40aecfe0b0.xml">
+      <metadata>
+        <lom xmlns="http://ltsc.ieee.org/xsd/LOM">
+          <general>
+            <title>
+              <string><![CDATA[]]></string>
+            </title>
+          </general>
+          <technical>
+            <format>text/x-imsqti-item-xml</format>
+          </technical>
+          <qtiMetadata xmlns="http://www.imsglobal.org/xsd/imsqti_metadata_v2p1">
+            <interactionType>choiceInteraction</interactionType>
+          </qtiMetadata>
+        </lom>
+      </metadata>
+      <file href="choiceInteraction_LARGESOURCE_MULTIPLECHOICE_40aecfe0b0.xml" />
+    </resource>
+    <resource identifier="DRP-09202025-T-R2" type="imsqti_item_xmlv2p1" href="choiceInteraction_LARGESOURCE_MULTIPLECHOICE_c903b6d876.xml">
+      <metadata>
+        <lom xmlns="http://ltsc.ieee.org/xsd/LOM">
+          <general>
+            <title>
+              <string><![CDATA[]]></string>
+            </title>
+          </general>
+          <technical>
+            <format>text/x-imsqti-item-xml</format>
+          </technical>
+          <qtiMetadata xmlns="http://www.imsglobal.org/xsd/imsqti_metadata_v2p1">
+            <interactionType>choiceInteraction</interactionType>
+          </qtiMetadata>
+        </lom>
+      </metadata>
+      <file href="choiceInteraction_LARGESOURCE_MULTIPLECHOICE_c903b6d876.xml" />
+    </resource>
+    <resource identifier="DRP-09202025-T-R3" type="imsqti_item_xmlv2p1" href="choiceInteraction_LARGESOURCE_MULTIPLECHOICE_ee4a88d06e.xml">
+      <metadata>
+        <lom xmlns="http://ltsc.ieee.org/xsd/LOM">
+          <general>
+            <title>
+              <string><![CDATA[]]></string>
+            </title>
+          </general>
+          <technical>
+            <format>text/x-imsqti-item-xml</format>
+          </technical>
+          <qtiMetadata xmlns="http://www.imsglobal.org/xsd/imsqti_metadata_v2p1">
+            <interactionType>choiceInteraction</interactionType>
+          </qtiMetadata>
+        </lom>
+      </metadata>
+      <file href="choiceInteraction_LARGESOURCE_MULTIPLECHOICE_ee4a88d06e.xml" />
+    </resource>
+    <resource identifier="DRP-09202025-T-R4" type="imsqti_item_xmlv2p1" href="choiceInteraction_LARGESOURCE_MULTIPLECHOICE_68cfcf1a21.xml">
+      <metadata>
+        <lom xmlns="http://ltsc.ieee.org/xsd/LOM">
+          <general>
+            <title>
+              <string><![CDATA[]]></string>
+            </title>
+          </general>
+          <technical>
+            <format>text/x-imsqti-item-xml</format>
+          </technical>
+          <qtiMetadata xmlns="http://www.imsglobal.org/xsd/imsqti_metadata_v2p1">
+            <interactionType>choiceInteraction</interactionType>
+          </qtiMetadata>
+        </lom>
+      </metadata>
+      <file href="choiceInteraction_LARGESOURCE_MULTIPLECHOICE_68cfcf1a21.xml" />
+    </resource>
+    <resource identifier="DRP-09202025-T-R5" type="imsqti_item_xmlv2p1" href="choiceInteraction_LARGESOURCE_MULTIPLECHOICE_2e3bf7a6fc.xml">
+      <metadata>
+        <lom xmlns="http://ltsc.ieee.org/xsd/LOM">
+          <general>
+            <title>
+              <string><![CDATA[]]></string>
+            </title>
+          </general>
+          <technical>
+            <format>text/x-imsqti-item-xml</format>
+          </technical>
+          <qtiMetadata xmlns="http://www.imsglobal.org/xsd/imsqti_metadata_v2p1">
+            <interactionType>choiceInteraction</interactionType>
+          </qtiMetadata>
+        </lom>
+      </metadata>
+      <file href="choiceInteraction_LARGESOURCE_MULTIPLECHOICE_2e3bf7a6fc.xml" />
+    </resource>
+    <resource identifier="DRP-09202025-T-R6" type="imsqti_item_xmlv2p1" href="choiceInteraction_LARGESOURCE_MULTIPLECHOICE_34ac8792c3.xml">
+      <metadata>
+        <lom xmlns="http://ltsc.ieee.org/xsd/LOM">
+          <general>
+            <title>
+              <string><![CDATA[]]></string>
+            </title>
+          </general>
+          <technical>
+            <format>text/x-imsqti-item-xml</format>
+          </technical>
+          <qtiMetadata xmlns="http://www.imsglobal.org/xsd/imsqti_metadata_v2p1">
+            <interactionType>choiceInteraction</interactionType>
+          </qtiMetadata>
+        </lom>
+      </metadata>
+      <file href="choiceInteraction_LARGESOURCE_MULTIPLECHOICE_34ac8792c3.xml" />
+    </resource>
+    <resource identifier="DRP-09202025-T-R7" type="imsqti_item_xmlv2p1" href="choiceInteraction_LARGESOURCE_MULTIPLECHOICE_152ae1a59a.xml">
+      <metadata>
+        <lom xmlns="http://ltsc.ieee.org/xsd/LOM">
+          <general>
+            <title>
+              <string><![CDATA[]]></string>
+            </title>
+          </general>
+          <technical>
+            <format>text/x-imsqti-item-xml</format>
+          </technical>
+          <qtiMetadata xmlns="http://www.imsglobal.org/xsd/imsqti_metadata_v2p1">
+            <interactionType>choiceInteraction</interactionType>
+          </qtiMetadata>
+        </lom>
+      </metadata>
+      <file href="choiceInteraction_LARGESOURCE_MULTIPLECHOICE_152ae1a59a.xml" />
+    </resource>
+    <resource identifier="DRP-09202025-T-R8" type="imsqti_item_xmlv2p1" href="choiceInteraction_LARGESOURCE_MULTIPLECHOICE_ee7c74af51.xml">
+      <metadata>
+        <lom xmlns="http://ltsc.ieee.org/xsd/LOM">
+          <general>
+            <title>
+              <string><![CDATA[]]></string>
+            </title>
+          </general>
+          <technical>
+            <format>text/x-imsqti-item-xml</format>
+          </technical>
+          <qtiMetadata xmlns="http://www.imsglobal.org/xsd/imsqti_metadata_v2p1">
+            <interactionType>choiceInteraction</interactionType>
+          </qtiMetadata>
+        </lom>
+      </metadata>
+      <file href="choiceInteraction_LARGESOURCE_MULTIPLECHOICE_ee7c74af51.xml" />
+    </resource>
+    <resource identifier="DRP-09202025-T-R9" type="imsqti_item_xmlv2p1" href="choiceInteraction_LARGESOURCE_MULTIPLECHOICE_2c9f4dd99f.xml">
+      <metadata>
+        <lom xmlns="http://ltsc.ieee.org/xsd/LOM">
+          <general>
+            <title>
+              <string><![CDATA[]]></string>
+            </title>
+          </general>
+          <technical>
+            <format>text/x-imsqti-item-xml</format>
+          </technical>
+          <qtiMetadata xmlns="http://www.imsglobal.org/xsd/imsqti_metadata_v2p1">
+            <interactionType>choiceInteraction</interactionType>
+          </qtiMetadata>
+        </lom>
+      </metadata>
+      <file href="choiceInteraction_LARGESOURCE_MULTIPLECHOICE_2c9f4dd99f.xml" />
+    </resource>
+    <resource identifier="DRP-09202025-T-R10" type="imsqti_item_xmlv2p1" href="choiceInteraction_LARGESOURCE_MULTIPLECHOICE_437d9cf151.xml">
+      <metadata>
+        <lom xmlns="http://ltsc.ieee.org/xsd/LOM">
+          <general>
+            <title>
+              <string><![CDATA[]]></string>
+            </title>
+          </general>
+          <technical>
+            <format>text/x-imsqti-item-xml</format>
+          </technical>
+          <qtiMetadata xmlns="http://www.imsglobal.org/xsd/imsqti_metadata_v2p1">
+            <interactionType>choiceInteraction</interactionType>
+          </qtiMetadata>
+        </lom>
+      </metadata>
+      <file href="choiceInteraction_LARGESOURCE_MULTIPLECHOICE_437d9cf151.xml" />
+    </resource>
+    <resource identifier="DRP-09202025-T-R11" type="imsqti_item_xmlv2p1" href="choiceInteraction_LARGESOURCE_MULTIPLECHOICE_33621bf851.xml">
+      <metadata>
+        <lom xmlns="http://ltsc.ieee.org/xsd/LOM">
+          <general>
+            <title>
+              <string><![CDATA[]]></string>
+            </title>
+          </general>
+          <technical>
+            <format>text/x-imsqti-item-xml</format>
+          </technical>
+          <qtiMetadata xmlns="http://www.imsglobal.org/xsd/imsqti_metadata_v2p1">
+            <interactionType>choiceInteraction</interactionType>
+          </qtiMetadata>
+        </lom>
+      </metadata>
+      <file href="choiceInteraction_LARGESOURCE_MULTIPLECHOICE_33621bf851.xml" />
+    </resource>
+    <resource identifier="DRP-09202025-T-R12" type="imsqti_item_xmlv2p1" href="choiceInteraction_LARGESOURCE_MULTIPLECHOICE_4e12ee735e.xml">
+      <metadata>
+        <lom xmlns="http://ltsc.ieee.org/xsd/LOM">
+          <general>
+            <title>
+              <string><![CDATA[]]></string>
+            </title>
+          </general>
+          <technical>
+            <format>text/x-imsqti-item-xml</format>
+          </technical>
+          <qtiMetadata xmlns="http://www.imsglobal.org/xsd/imsqti_metadata_v2p1">
+            <interactionType>choiceInteraction</interactionType>
+          </qtiMetadata>
+        </lom>
+      </metadata>
+      <file href="choiceInteraction_LARGESOURCE_MULTIPLECHOICE_4e12ee735e.xml" />
+    </resource>
+    <resource identifier="DRP-09202025-T-R13" type="imsqti_item_xmlv2p1" href="choiceInteraction_LARGESOURCE_MULTIPLECHOICE_5cf1f889d7.xml">
+      <metadata>
+        <lom xmlns="http://ltsc.ieee.org/xsd/LOM">
+          <general>
+            <title>
+              <string><![CDATA[]]></string>
+            </title>
+          </general>
+          <technical>
+            <format>text/x-imsqti-item-xml</format>
+          </technical>
+          <qtiMetadata xmlns="http://www.imsglobal.org/xsd/imsqti_metadata_v2p1">
+            <interactionType>choiceInteraction</interactionType>
+          </qtiMetadata>
+        </lom>
+      </metadata>
+      <file href="choiceInteraction_LARGESOURCE_MULTIPLECHOICE_5cf1f889d7.xml" />
+    </resource>
+    <resource identifier="DRP-09202025-T-R14" type="imsqti_item_xmlv2p1" href="choiceInteraction_LARGESOURCE_MULTIPLECHOICE_14f7979d51.xml">
+      <metadata>
+        <lom xmlns="http://ltsc.ieee.org/xsd/LOM">
+          <general>
+            <title>
+              <string><![CDATA[]]></string>
+            </title>
+          </general>
+          <technical>
+            <format>text/x-imsqti-item-xml</format>
+          </technical>
+          <qtiMetadata xmlns="http://www.imsglobal.org/xsd/imsqti_metadata_v2p1">
+            <interactionType>choiceInteraction</interactionType>
+          </qtiMetadata>
+        </lom>
+      </metadata>
+      <file href="choiceInteraction_LARGESOURCE_MULTIPLECHOICE_14f7979d51.xml" />
+    </resource>
+    <resource identifier="DRP-09202025-T-R15" type="imsqti_item_xmlv2p1" href="choiceInteraction_LARGESOURCE_MULTIPLECHOICE_eead5dc073.xml">
+      <metadata>
+        <lom xmlns="http://ltsc.ieee.org/xsd/LOM">
+          <general>
+            <title>
+              <string><![CDATA[]]></string>
+            </title>
+          </general>
+          <technical>
+            <format>text/x-imsqti-item-xml</format>
+          </technical>
+          <qtiMetadata xmlns="http://www.imsglobal.org/xsd/imsqti_metadata_v2p1">
+            <interactionType>choiceInteraction</interactionType>
+          </qtiMetadata>
+        </lom>
+      </metadata>
+      <file href="choiceInteraction_LARGESOURCE_MULTIPLECHOICE_eead5dc073.xml" />
+    </resource>
+    <resource identifier="DRP-09202025-T-R16" type="imsqti_item_xmlv2p1" href="choiceInteraction_LARGESOURCE_MULTIPLECHOICE_d1b90ea1d5.xml">
+      <metadata>
+        <lom xmlns="http://ltsc.ieee.org/xsd/LOM">
+          <general>
+            <title>
+              <string><![CDATA[]]></string>
+            </title>
+          </general>
+          <technical>
+            <format>text/x-imsqti-item-xml</format>
+          </technical>
+          <qtiMetadata xmlns="http://www.imsglobal.org/xsd/imsqti_metadata_v2p1">
+            <interactionType>choiceInteraction</interactionType>
+          </qtiMetadata>
+        </lom>
+      </metadata>
+      <file href="choiceInteraction_LARGESOURCE_MULTIPLECHOICE_d1b90ea1d5.xml" />
+    </resource>
+    <resource identifier="DRP-09202025-T-R17" type="imsqti_item_xmlv2p1" href="choiceInteraction_LARGESOURCE_MULTIPLECHOICE_87eaee2d14.xml">
+      <metadata>
+        <lom xmlns="http://ltsc.ieee.org/xsd/LOM">
+          <general>
+            <title>
+              <string><![CDATA[]]></string>
+            </title>
+          </general>
+          <technical>
+            <format>text/x-imsqti-item-xml</format>
+          </technical>
+          <qtiMetadata xmlns="http://www.imsglobal.org/xsd/imsqti_metadata_v2p1">
+            <interactionType>choiceInteraction</interactionType>
+          </qtiMetadata>
+        </lom>
+      </metadata>
+      <file href="choiceInteraction_LARGESOURCE_MULTIPLECHOICE_87eaee2d14.xml" />
+    </resource>
+    <resource identifier="DRP-09202025-T-R18" type="imsqti_item_xmlv2p1" href="choiceInteraction_LARGESOURCE_MULTIPLECHOICE_936735a2e7.xml">
+      <metadata>
+        <lom xmlns="http://ltsc.ieee.org/xsd/LOM">
+          <general>
+            <title>
+              <string><![CDATA[]]></string>
+            </title>
+          </general>
+          <technical>
+            <format>text/x-imsqti-item-xml</format>
+          </technical>
+          <qtiMetadata xmlns="http://www.imsglobal.org/xsd/imsqti_metadata_v2p1">
+            <interactionType>choiceInteraction</interactionType>
+          </qtiMetadata>
+        </lom>
+      </metadata>
+      <file href="choiceInteraction_LARGESOURCE_MULTIPLECHOICE_936735a2e7.xml" />
+    </resource>
+    <resource identifier="DRP-09202025-T-R19" type="imsqti_item_xmlv2p1" href="choiceInteraction_LARGESOURCE_MULTIPLECHOICE_cd5ed0ce10.xml">
+      <metadata>
+        <lom xmlns="http://ltsc.ieee.org/xsd/LOM">
+          <general>
+            <title>
+              <string><![CDATA[]]></string>
+            </title>
+          </general>
+          <technical>
+            <format>text/x-imsqti-item-xml</format>
+          </technical>
+          <qtiMetadata xmlns="http://www.imsglobal.org/xsd/imsqti_metadata_v2p1">
+            <interactionType>choiceInteraction</interactionType>
+          </qtiMetadata>
+        </lom>
+      </metadata>
+      <file href="choiceInteraction_LARGESOURCE_MULTIPLECHOICE_cd5ed0ce10.xml" />
+    </resource>
+  </resources>
+</manifest>

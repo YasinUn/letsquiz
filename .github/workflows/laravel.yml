@@ -1,0 +1,74 @@
+name: Laravel CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  laravel-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v4
+
+    - name: Setup PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '8.4'
+        extensions: mbstring, pdo_sqlite, bcmath, curl, dom, fileinfo, openssl, tokenizer, xml
+
+    - name: Cache Composer Dependencies
+      uses: actions/cache@v3
+      with:
+        path: LetsQuiz/vendor
+        key: ${{ runner.os }}-composer-${{ hashFiles('LetsQuiz/composer.lock') }}
+        restore-keys: ${{ runner.os }}-composer-
+
+    - name: Set Composer Platform Config
+      run: composer config platform.php 8.4.0
+      working-directory: LetsQuiz
+
+    - name: Copy .env
+      run: php -r "file_exists('.env') || copy('.env.example', '.env');"
+      working-directory: LetsQuiz
+
+    - name: Install Dependencies
+      run: composer install --prefer-dist --no-progress --no-interaction
+      working-directory: LetsQuiz
+
+    - name: Generate App Key
+      run: php artisan key:generate
+      working-directory: LetsQuiz
+
+    - name: Set Directory Permissions
+      run: chmod -R 777 storage bootstrap/cache
+      working-directory: LetsQuiz
+
+    - name: Create SQLite Database
+      run: |
+        mkdir -p database
+        touch database/database.sqlite
+      working-directory: LetsQuiz
+
+    - name: Install Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+
+    - name: Install NPM Dependencies
+      run: npm install
+      working-directory: LetsQuiz
+
+    - name: Build Vite Assets
+      run: npm run build
+      working-directory: LetsQuiz
+    
+    - name: Run Laravel Tests
+      env:
+        DB_CONNECTION: sqlite
+        DB_DATABASE: database/database.sqlite
+      run: php artisan test
+      working-directory: LetsQuiz
