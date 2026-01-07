@@ -426,16 +426,16 @@
                                 </div>
                             </div>
 
-                            <!-- Vrijwilligerswerk/Extra -->
+                            <!-- parttime -->
                             <div class="timeline-item reveal-child glass-card bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-cyan-500/30 transition-all duration-500 ml-8 relative group">
                                 <div class="timeline-dot absolute -left-[1.75rem] top-6 w-3 h-3 bg-cyan-500 rounded-full border-2 border-black group-hover:scale-125 transition-transform"></div>
                                 <div class="flex items-center gap-2 mb-2">
-                                    <span class="px-2 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded-full">Vrijwillig</span>
+                                    <span class="px-2 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded-full">Part-time</span>
                                 </div>
                                 <h3 class="text-lg font-bold text-white mb-1">Software developer</h3>
                                 <p class="text-cyan-400 text-sm mb-2">RCyberSecurity | Nov 2025 - Heden</p>
                                 <p class="text-gray-300 text-sm">
-                                    Vrijwilligerswerk als software developer voor een non-profit organisatie gericht op cyberveiligheid.
+                                    Ontwikkelen van beveiligingssoftware en tools voor klanten.
                                 </p>
                             </div>
                         </div>
