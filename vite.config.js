@@ -1,13 +1,14 @@
 import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
+import react from '@vitejs/plugin-react';
 import fs from 'fs';
 import path from 'path';
 
-// Dynamically gather all .css and .js files inside resources/css and resources/js
+// Dynamically gather asset entry files inside resources/css and resources/js
 function gatherAssetEntries() {
     const roots = [
         { dir: 'resources/css', ext: '.css' },
-        { dir: 'resources/js', ext: '.js' },
+        { dir: 'resources/js', ext: ['.js', '.jsx', '.ts', '.tsx'] },
     ];
 
     const entries = [];
@@ -15,7 +16,8 @@ function gatherAssetEntries() {
         try {
             const files = fs.readdirSync(path.resolve(__dirname, dir));
             for (const file of files) {
-                if (file.endsWith(ext)) {
+                const extensions = Array.isArray(ext) ? ext : [ext];
+                if (extensions.some((extension) => file.endsWith(extension))) {
                     entries.push(path.posix.join(dir.replace(/\\/g, '/'), file));
                 }
             }
@@ -30,6 +32,7 @@ const assetInputs = gatherAssetEntries();
 
 export default defineConfig({
     plugins: [
+        react(),
         laravel({
             // Automatically includes every JS & CSS file in the two resource folders
             input: assetInputs,

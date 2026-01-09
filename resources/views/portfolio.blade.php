@@ -131,7 +131,7 @@
             </div>
 
             <!-- Sticky Cards Container -->
-            <div class="relative" style="min-height: 250vh;">
+            <div class="relative" style="min-height: 310vh;">
 
                 <!-- Project 1 -->
                 <div class="sticky top-[5vh] z-10 flex items-start justify-center px-2 md:px-8 pt-4">
@@ -200,6 +200,56 @@
 
                 <!-- Project 2 -->
                 <div class="sticky top-[7vh] z-20 flex items-start justify-center px-2 md:px-8 pt-4">
+                    <div class="project-card cyan-card relative overflow-hidden w-full max-w-4xl min-h-[60vh] md:min-h-[70vh] bg-gradient-to-br from-cyan-900/90 to-sky-800/70 backdrop-blur-md rounded-3xl p-4 md:p-12 border border-cyan-500/30 shadow-2xl shadow-cyan-500/20">
+                        <div class="shimmer-effect absolute inset-0 rounded-3xl pointer-events-none"></div>
+                        <div class="relative z-10 text-center mb-6">
+                            <span class="float-icon inline-block text-6xl md:text-8xl">🌦️</span>
+                        </div>
+                        <h3 class="relative z-10 text-3xl md:text-5xl font-bold text-white text-center mb-4">Weer App</h3>
+                        <p class="relative z-10 text-lg md:text-xl text-gray-300 text-center mb-6">Een Laravel-ReactJS weather app met live zoeken en 3-daagse forecast</p>
+
+                        <!-- Features -->
+                        <div class="relative z-10 grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+                            <div class="text-center p-3 bg-cyan-500/10 rounded-xl">
+                                <div class="text-2xl mb-1">🔎</div>
+                                <p class="text-xs text-cyan-300">Search</p>
+                            </div>
+                            <div class="text-center p-3 bg-cyan-500/10 rounded-xl">
+                                <div class="text-2xl mb-1">📅</div>
+                                <p class="text-xs text-cyan-300">3-Day Forecast</p>
+                            </div>
+                            <div class="text-center p-3 bg-cyan-500/10 rounded-xl">
+                                <div class="text-2xl mb-1">🌐</div>
+                                <p class="text-xs text-cyan-300">API</p>
+                            </div>
+                            <div class="text-center p-3 bg-cyan-500/10 rounded-xl">
+                                <div class="text-2xl mb-1">⚡</div>
+                                <p class="text-xs text-cyan-300">Vite</p>
+                            </div>
+                        </div>
+
+                        <div class="relative z-10 flex flex-wrap justify-center gap-3 mb-4">
+                            <span class="px-4 py-2 bg-cyan-500/20 text-cyan-300 rounded-full text-sm">React</span>
+                            <span class="px-4 py-2 bg-cyan-500/20 text-cyan-300 rounded-full text-sm">Laravel</span>
+                            <span class="px-4 py-2 bg-cyan-500/20 text-cyan-300 rounded-full text-sm">API's</span>
+                            <span class="px-4 py-2 bg-cyan-500/20 text-cyan-300 rounded-full text-sm">Tailwind CSS</span>
+                        </div>
+
+                        <!-- What I learned -->
+                        <div class="relative z-10 bg-white/5 rounded-xl p-4 mb-6">
+                            <p class="text-sm text-gray-400 text-center">💡 <span class="text-white">Geleerd:</span> React state/hooks, API fetch, environment variables, Vite bundling</p>
+                        </div>
+
+                        <div class="relative z-10 text-center">
+                            <a href="{{ route('weather') }}" class="pulse-cta inline-flex items-center gap-2 px-8 py-4 bg-cyan-600 hover:bg-cyan-700 text-white text-lg font-bold rounded-xl transition-all transform hover:scale-105 shadow-lg">
+                                Bekijk Project →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="sticky top-[9vh] z-30 flex items-start justify-center px-2 md:px-8 pt-4">
                     <div class="project-card orange-card relative overflow-hidden w-full max-w-4xl min-h-[60vh] md:min-h-[70vh] bg-gradient-to-br from-orange-900/90 to-red-800/70 backdrop-blur-md rounded-3xl p-4 md:p-12 border border-orange-500/30 shadow-2xl shadow-orange-500/20">
                         <div class="shimmer-effect absolute inset-0 rounded-3xl pointer-events-none"></div>
                         <div class="relative z-10 text-center mb-6">
@@ -252,8 +302,8 @@
                     </div>
                 </div>
 
-                <!-- Project 3 -->
-                <div class="sticky top-[9vh] z-30 flex items-start justify-center px-2 md:px-8 pt-4">
+                <!-- Project 4 -->
+                <div class="sticky top-[11vh] z-40 flex items-start justify-center px-2 md:px-8 pt-4">
                     <div class="project-card green-card relative overflow-hidden w-full max-w-4xl min-h-[60vh] md:min-h-[70vh] bg-gradient-to-br from-green-900/90 to-teal-800/70 backdrop-blur-md rounded-3xl p-4 md:p-12 border border-green-500/30 shadow-2xl shadow-green-500/20">
                         <div class="shimmer-effect absolute inset-0 rounded-3xl pointer-events-none"></div>
                         <div class="relative z-10 text-center mb-6">
@@ -306,8 +356,8 @@
                     </div>
                 </div>
 
-                <!-- Project 4 -->
-                <div class="sticky top-[11vh] z-40 flex items-start justify-center px-2 md:px-8 pt-4">
+                <!-- Project 5 -->
+                <div class="sticky top-[13vh] z-50 flex items-start justify-center px-2 md:px-8 pt-4">
                     <div class="project-card purple-card relative overflow-hidden w-full max-w-4xl min-h-[60vh] md:min-h-[70vh] bg-gradient-to-br from-purple-900/90 to-pink-800/70 backdrop-blur-md rounded-3xl p-4 md:p-12 border border-purple-500/30 shadow-2xl shadow-purple-500/20">
                         <div class="shimmer-effect absolute inset-0 rounded-3xl pointer-events-none"></div>
                         <div class="relative z-10 text-center mb-6">

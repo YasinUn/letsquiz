@@ -17,6 +17,11 @@ Route::get('/', function () {
     return view('portfolio');
 })->name('portfolio');
 
+// Portfolio project: Weather (React)
+Route::get('/weather', function () {
+    return view('weather');
+})->name('weather');
+
 // Main application homepage
 Route::get('/home', function () {
     return view('welcome');
